@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  nopcommerce:
+    image: nopcommerceteam/nopcommerce:latest
+    ports:
+      - "8080:80"
+    environment:
+      - ConnectionStrings__DataSettings=Data Source=db;Initial Catalog=nopcommerce;User ID=sa;Password=nopCommerce_db_v1;TrustServerCertificate=True
+    depends_on:
+      - db
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=nopCommerce_db_v1
+    ports:
+      - "1433:1433"
