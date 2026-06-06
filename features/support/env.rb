@@ -2,7 +2,7 @@ require 'capybara'
 require 'capybara/cucumber'
 require 'selenium-webdriver'
 require 'faker'
-Dir[File.join(File.dirname(__FILE__), '../../pages/*.rb')].each { |file| require file }
+Dir[File.join(File.dirname(__FILE__), '../pages/*.rb')].each { |file| require file }
 Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
