@@ -41,7 +41,7 @@ Feature: User addresses management
       | fax        | +16316981319             |
     Then I click on "Save" button
     Then I should see error message "Please enter a valid email address."
-
+@add_address
   Scenario Outline: : <case_id>-Add address with country that has states
     When i fill in address form with:
       | first_name | Automation            |
@@ -74,7 +74,7 @@ Feature: User addresses management
       | case_id | country                  | state      | city      | address1                | address2        | zip   | phone        | fax         |
       | TC_03   | United States of America | California | San Diego | 5396 North Reese Avenue | Fresno CA 93722 | 93722 | +16316981319 | 16316981319 |
       | TC_04   | Vietnam                  | Hà Nội     | Hà Nội    | 123 Hoàng Diệu          | Hoang Mai       | 10000 | +84912345678 | 16316981319 |
-
+@add_address
   Scenario: TC_05- Add address with country has no state
     When I fill in address form with:
       | first_name | Automation            |
