@@ -6,7 +6,7 @@ Before do
 end
 After('@add_address') do
   visit('/customer/addresses')
-  while pageeeeeeee.has_css?('.delete-address-button', wait: 3)
+  while page.has_css?('.delete-address-button', wait: 3)
     first('.delete-address-button').click
     page.driver.browser.switch_to.alert.accept rescue nil
     sleep 1
