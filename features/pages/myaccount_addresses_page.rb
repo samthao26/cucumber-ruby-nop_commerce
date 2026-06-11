@@ -1,6 +1,7 @@
 class MyAccountAddressPage
   include Capybara::DSL
   include RSpec::Matchers
+  ADDRESS_LINK = '.customer-addresses a'
   FIRST_NAME_ADDRESS = 'Address_FirstName'
   LAST_NAME_ADDRESS = 'Address_LastName'
   EMAIL_ADDRESS = 'Address_Email'
@@ -14,7 +15,7 @@ class MyAccountAddressPage
   PHONE_NUMBER_ADDRESS = 'Address_PhoneNumber'
   FAX_NUMBER_ADDRESS = 'Address_FaxNumber'
   ADD_NEW_BUTTON = '.button-1.add-address-button'
-  ADDRESS_LINK = '.customer-addresses a'
+
 
   NAME_VERIFY = '.name'
   EMAIL_VERIFY = '.email'
@@ -30,7 +31,6 @@ class MyAccountAddressPage
 
   def access_address_link
     find(ADDRESS_LINK).click
-
     end
 
   def fill_in_address(data)

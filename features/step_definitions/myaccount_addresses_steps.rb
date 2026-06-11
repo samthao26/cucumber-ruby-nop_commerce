@@ -1,4 +1,5 @@
 Then(/^I should see addresses form$/) do
+
   expect(page).to have_field('Address_FirstName')
 end
 

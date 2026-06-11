@@ -1,6 +1,18 @@
 And(/^I click on "([^"]*)" link$/) do |link_name|
-  find('.ico-account').click
-end
+  if page.has_css?('.bar-notification', wait: 2)
+    find('.bar-notification .close').click rescue nil
+    sleep 0.5
+  end
+
+  case link_name
+  when 'Log out'
+    find('.ico-logout').click
+  when 'My account'
+    find('.ico-account').click
+  else
+    click_link link_name
+  end
+  end
 
 Then(/^I should be redirected to Customer Info page$/) do
   expect(page).to have_content("My account - Customer info")

@@ -3,6 +3,7 @@ Before do
   @login_page = LoginPage.new
   @customer_info_page = CustomerInfoPage.new
   @myaccount_addresses_page = MyAccountAddressPage.new
+  @change_password_page = ChangePasswordPage.new
 end
 After('@add_address') do
   visit('/customer/addresses')
