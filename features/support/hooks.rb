@@ -2,8 +2,10 @@ Before do
   @register_page = RegisterPage.new
   @login_page = LoginPage.new
   @customer_info_page = CustomerInfoPage.new
-  @myaccount_addresses_page = MyAccountAddressPage.new
+  @my_account_addresses_page = MyAccountAddressesPage.new
   @change_password_page = ChangePasswordPage.new
+  @product_review_page = ProductReviewPage.new
+  @search_page = SearchPage.new
 end
 After('@add_address') do
   visit('/customer/addresses')
