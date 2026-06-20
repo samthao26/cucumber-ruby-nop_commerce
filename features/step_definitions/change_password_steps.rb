@@ -11,7 +11,6 @@ Then(/^I should see pw_error_message:$/) do |table|
 end
 
 Then(/^I should see "([^"]*)"$/) do |pw_error_message|
-
   expect(page).to have_content(pw_error_message)
 end
 
