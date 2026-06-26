@@ -9,7 +9,7 @@ Feature: User product reviews management
     And I fill in login form with "automation1@gmail.com", "123456"
     And I click on "Log in" button
     And I search for product "Lenovo ThinkPad X1 Carbon"
-    And I navigate to the product review section
+    And I navigate to the product details page
 
   Scenario: RV_01 - Add product review with empty data
     When I click Submit review button

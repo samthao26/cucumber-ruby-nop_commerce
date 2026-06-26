@@ -24,10 +24,6 @@ Then(/^I should see "([^"]*)" removed from wishlist page$/) do |product_name|
 
 end
 
-When(/^I navigate to shopping card page$/) do
-  @wishlist_page.navigate_to_cart_page
-end
-
 Then(/^I should see "([^"]*)" in shopping cart page$/) do |product_name|
   @wishlist_page.verify_product_in_cart(product_name)
 end
@@ -40,4 +36,6 @@ Then(/^I should see a successfully message "([^"]*)"$/) do |successfully_message
 
 end
 
-
+When(/^I navigate to shopping cart page$/) do
+  @wishlist_page.navigate_to_cart_page
+end

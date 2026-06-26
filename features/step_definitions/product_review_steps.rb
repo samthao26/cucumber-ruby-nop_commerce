@@ -4,11 +4,6 @@ And(/^I search for product "([^"]*)"$/) do |product_name|
 
 end
 
-And(/^I navigate to the product review section$/) do
-  @product_review_page.access_product_details_page
-  expect(page).to have_content 'Write your own review'
-end
-
 Then(/^I should see PR_error_messages:$/) do |table|
   table.raw.flatten.each do |pr_error_messages|
     expect(page).to have_content pr_error_messages
@@ -43,4 +38,9 @@ end
 
 And(/^I select rating "([^"]*)"$/) do |rating_option|
 @product_review_page.select_rate(rating_option)
+end
+
+And(/^I navigate to the product details page$/) do
+  @product_review_page.access_product_details_page
+  expect(page).to have_content 'Write your own review'
 end
