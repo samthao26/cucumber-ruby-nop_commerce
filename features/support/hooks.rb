@@ -6,6 +6,7 @@ Before do
   @change_password_page = ChangePasswordPage.new
   @product_review_page = ProductReviewPage.new
   @search_page = SearchPage.new
+  @wishlist_page = WishlistPage.new
 end
 After('@add_address') do
   visit('/customer/addresses')

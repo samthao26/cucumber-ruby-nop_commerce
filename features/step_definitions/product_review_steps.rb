@@ -1,5 +1,7 @@
 And(/^I search for product "([^"]*)"$/) do |product_name|
-@search_page.fill_in_search_form(product_name)
+@search_page.fill_in_search_box(product_name)
+  @search_page.submit_search
+
 end
 
 And(/^I navigate to the product review section$/) do

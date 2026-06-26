@@ -53,9 +53,9 @@ Feature: User search/advanced search
     And I click on Search button
     Then I should see "<search_result>"
     Examples:
-      | S_ID | title                 | brand_name | search_result                                      |
-      | S_08 | incorrect manufacture | Dell       | No products were found that matched your criteria. |
-      | S_09 | correct manufacture   | Apple      | Apple MacBook Pro 14                               |
+      | brand_name | S_ID | title                 | search_result                                      |
+      | Dell       | S_08 | incorrect manufacture | No products were found that matched your criteria. |
+      | Apple      | S_09 | correct manufacture   | Apple MacBook Pro 14                               |
 
 
 
