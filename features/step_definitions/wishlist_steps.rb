@@ -15,10 +15,6 @@ And(/^I select checkbox of "([^"]*)"$/) do |product_name|
   @wishlist_page.select_product_checkbox(product_name)
 end
 
-And(/^I click Add to cart button$/) do
-  @wishlist_page.add_to_cart_button
-end
-
 Then(/^I should see "([^"]*)" removed from wishlist page$/) do |product_name|
   @wishlist_page.verify_product_not_in_wishlist(product_name)
 
@@ -38,4 +34,8 @@ end
 
 When(/^I navigate to shopping cart page$/) do
   @wishlist_page.navigate_to_cart_page
+end
+
+And(/^At wishlist page I click Add to cart button$/) do
+  @wishlist_page.add_to_cart_button
 end

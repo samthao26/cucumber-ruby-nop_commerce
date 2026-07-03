@@ -23,7 +23,7 @@ Feature: Add product to wishlist
     And I click Add to wishlist button
     When I navigate to wishlist page
     And I select checkbox of "Lenovo ThinkPad X1 Carbon"
-    And I click Add to cart button
+    And At wishlist page I click Add to cart button
     Then I should see "Lenovo ThinkPad X1 Carbon" removed from wishlist page
     When I navigate to shopping cart page
     Then I should see "Lenovo ThinkPad X1 Carbon" in shopping cart page

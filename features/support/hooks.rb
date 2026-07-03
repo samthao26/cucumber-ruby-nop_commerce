@@ -7,6 +7,7 @@ Before do
   @product_review_page = ProductReviewPage.new
   @search_page = SearchPage.new
   @wishlist_page = WishlistPage.new
+  @add_to_cart_page = AddToCartPage.new
 end
 After('@add_address') do
   visit('/customer/addresses')
