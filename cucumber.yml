@@ -1,1 +1,14 @@
-default: --publish-quiet
+# cucumber.yml
+default: >
+  --publish-quiet
+  --format AllureCucumber::CucumberFormatter
+  --out allure-results
+  features/registration/user_registration.feature
+  features/login/user_login.feature
+  features/customer/customer_info.feature
+  features/customer/addresses.feature
+  features/customer/product_review.feature
+  features/customer/search.feature
+  features/customer/wishlist.feature
+  features/customer/add_to_cart.feature
+  features/customer/change_password.feature

@@ -8,7 +8,7 @@ Feature: Add product to cart
     And I navigate to Login page
     And I fill in login form with "automation1@gmail.com", "123456"
     And I click on "Log in" button
-
+@cart
   Scenario:ATC_01 - Add item to cart
     Given I search for product "Apple MacBook Pro 14"
 
@@ -23,7 +23,7 @@ Feature: Add product to cart
     And I navigate to the product details page
     And I click Add to cart button
     And I navigate to shopping cart page
-    Then I click to <direction> button of "Apple MacBook Pro 14",
+    Then I click to <direction> button of "Apple MacBook Pro 14"
     Then I should see correct total price for "Apple MacBook Pro 14"
 
     Examples:

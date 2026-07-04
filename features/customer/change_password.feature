@@ -6,7 +6,7 @@ Feature: User change password
   Background: User logged and navigate to Change Password
     When I open demo nonCommerce homepage
     And I navigate to Login page
-    And I fill in login form with "automation1@gmail.com", "123456!"
+    And I fill in login form with "automation1@gmail.com", "123456"
     And I click on "Log in" button
     And I click on "My account" link
     And I access Change Password tab from sidebar menu
@@ -29,7 +29,7 @@ Feature: User change password
       | PW_TC_03   | 123456       | 12345        | 12345            | Password must meet the following rules: must have at least 6 characters and not greater than 64 characters |
       | PW_TC_04   | 123456       | 123456       | 1234567          | The new password and confirmation password do not match.                                                   |
       | PW_TC_05   | 123456       | 123456       | 123456           | You entered the password that is the same as one of the last passwords you used.                           |
-
+  @reset_password
   Scenario: PW_TC_06- Change password successfully with valid data
     When I fill in Change password with "123456","NewPass@2026","NewPass@2026"
     And I click on "Change password" button

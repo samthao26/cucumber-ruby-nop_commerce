@@ -8,7 +8,7 @@ Feature: Add product to wishlist
     And I navigate to Login page
     And I fill in login form with "automation1@gmail.com", "123456"
     And I click on "Log in" button
-
+@wishlist
   Scenario: WL_01 - Successfully adding an in-stock item to wishlist
     Given I search for product "Lenovo ThinkPad X1 Carbon"
     And I navigate to the product details page

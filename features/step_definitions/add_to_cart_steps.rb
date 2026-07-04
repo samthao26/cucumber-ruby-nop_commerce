@@ -18,6 +18,6 @@ Then(/^I should see a successfully add_to_cart message "([^"]*)"$/) do |message|
   expect(page).to have_content(message)
 end
 
-Then(/^I click to (.*) button of "([^"]*)",$/) do |product_name, direction|
+Then(/^I click to (.*) button of "([^"]*)"$/) do |product_name, direction|
   @add_to_cart_page.click_quantity(product_name, direction)
 end
